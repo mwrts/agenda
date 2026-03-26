@@ -1,0 +1,17 @@
+{
+  "name": "iseriroute",
+  "short_name": "iseriroute",
+  "description": "minimalist tablet dashboard for routine and focus",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#1a1c19",
+  "theme_color": "#1a1c19",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

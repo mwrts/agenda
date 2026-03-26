@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iseriroute</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <meta name="theme-color" content="#1a1c19">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body class="iseriroute-theme">
+    <div class="container landscape">
+        <!-- Top row: Time and Pomodoro -->
+        <header class="top-row">
+            <div id="time-display" class="card transparent text-left">
+                <div class="label-small">current time</div>
+                <div class="time-main" id="clock">00:00</div>
+                <div class="date-sub" id="date">thursday, march 26</div>
+            </div>
+            
+            <div id="pomodoro" class="card">
+                <div class="label-small text-center">pomodoro</div>
+                <div class="timer-display" id="timer-text">25:00</div>
+                <div class="timer-controls">
+                    <button id="timer-start" class="btn btn-primary">start</button>
+                    <button id="timer-reset" class="btn btn-secondary">reset</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Bottom row: Routine, Upcoming, Checklist -->
+        <main class="bottom-row">
+            <section id="routine" class="card">
+                <div class="section-header">
+                    <h2 class="section-title">daily routine</h2>
+                    <div class="status-pill" id="routine-status">-- items left</div>
+                </div>
+                <div class="list-container" id="routine-list">
+                    <!-- Routine items will be injected here -->
+                </div>
+            </section>
+
+            <section id="upcoming" class="card">
+                <div class="section-header">
+                    <h2 class="section-title">upcoming</h2>
+                </div>
+                <div class="list-container" id="upcoming-list">
+                    <!-- Upcoming exams/events -->
+                </div>
+            </section>
+
+            <section id="checklist" class="card">
+                <div class="section-header">
+                    <h2 class="section-title">checklist</h2>
+                    <button id="clear-done" class="btn-link">clear done</button>
+                </div>
+                <div class="list-container" id="checklist-items">
+                    <!-- Checklist items -->
+                </div>
+                <div class="add-task-container">
+                    <input type="text" id="new-task-input" placeholder="+ add a quick task..." autocomplete="off">
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js');
+            });
+        }
+    </script>
+</body>
+</html>
