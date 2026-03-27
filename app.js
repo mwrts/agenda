@@ -14,7 +14,7 @@ const WEEKDAY_ROUTINE = [
     { time: "16:40", task: "calisthenics", sub: "consistency > intensity", end: "17:10", checkable: true },
     { time: "17:10", task: "shower/reset", sub: "unwind", end: "17:30", checkable: true },
     { time: "17:30", task: "free time", sub: "genuinely free", end: "18:30" },
-    { time: "21:00", task: "math block 2", sub: "review + practice", end: "22:00", checkable: true },
+    { time: "21:00", task: "math block 2 / test study", sub: "review + practice", end: "22:00", checkable: true },
     { time: "22:00", task: "wind down", sub: "sleep target 23:00" }
 ];
 
